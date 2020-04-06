@@ -27,8 +27,7 @@ body
 	color: var(--color_deep-gray);
 	font-size: 1rem;
   overflow-x: hidden;
-	background-color: var(--color_very-light-gray);
-	font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color_very-light-gray);
 }
 body.lock {
 	overflow: hidden;
@@ -101,7 +100,7 @@ h6, .h6
 }
 
 p {
-	line-height: 1.42;
+	line-height: 1.61;
 }
 
 @media (max-width: 1199px)
@@ -511,6 +510,7 @@ textarea {
 }
 
 .contact-block {
+	max-height: 400px;
 	display: grid;
 	width: 100%;
 	grid-gap: 1rem;
@@ -518,65 +518,20 @@ textarea {
             "contact-block__github contact-block__gmail"
             "contact-block__tg contact-block__tg";
 }
-.contact-block span {
-	transform: scale(1) rotate(0deg);
-	transition: transform .33s ease-in;
-}
 .contact-block__item:nth-child(1) {
 	background: rgba(244, 201, 177, .5);
 	grid-area: contact-block__github;
-	color: #ac5c51;
-	text-shadow: 0 0 5px rgba(255,255,255,.75);
 }
 .contact-block__item:nth-child(2) {
-	background: rgba(212, 66, 51, .33);
+	background: rgba(212, 66, 51, .5);
 	grid-area: contact-block__gmail;
-	color: rgb(170, 35, 17);
-	text-shadow: 0 0 5px rgba(255,255,255,.75);
 }
 .contact-block__item:nth-child(3) {
-	background: rgba(39, 159, 217, .33);
+	background: rgba(39, 159, 217, .5);
 	grid-area: contact-block__tg;
-	color: rgb(31, 151, 213);
-	text-shadow: 0 0 5px rgba(255,255,255,.75);
-}
-.contact-block__item:hover span {
-	transform: scale(1.1) rotate(0deg);
 }
 .contact-block__img {
 	width: 100px;
 	height: 100px;
 	object-fit: cover;
 }
-
-@media (min-width: 992px) {
-	.contact-block {
-		padding-left: 1rem !important;
-		height: 400px;
-	}
-}
-
-@media (max-width: 992px) {
-	.contact-block {
-		margin-top: 1rem;
-	}
-}
-
-@media (max-width: 480px) {
-	.contact-block__img {
-		width: 48px;
-		height: 48px;
-	}
-	.header__photo {
-		width: 80px;
-		height: 80px;
-	}
-	.contact-block {
-		grid-template-areas: 
-						"contact-block__github contact-block__gmail contact-block__tg";
-	}
-	.contact-block__item span {
-		display: none;
-	}
-}
-
